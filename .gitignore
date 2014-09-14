@@ -1,0 +1,5 @@
+# NPM Development files
+node_modules
+
+# Minified css and js
+*.min.*

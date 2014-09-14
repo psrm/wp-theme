@@ -70,7 +70,9 @@ add_action( 'widgets_init', 'psrm_widgets_init' );
  * Enqueue scripts and styles.
  */
 function psrm_scripts() {
-	wp_enqueue_style( 'psrm-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'psrm-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css' );
+
+    wp_enqueue_script('psrm-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', false, false, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
