@@ -13,6 +13,7 @@ var livereload = require('gulp-livereload');        // LiveReload
 // Create our paths to do stuff
 var paths = {
     scripts: [
+        'assets/js/bootstrap/*.js',
         'assets/js/_*.js'
     ],
     jshint: [
