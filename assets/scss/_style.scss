@@ -1,3 +1,7 @@
+a {
+  font-family: $font-family-headings-base;
+}
+
 #page {
   max-width: 1000px;
   margin: auto;
@@ -13,7 +17,7 @@
     padding-top: 8%;
     .widget-title {
       background-color: lighten($brand-primary, 5%);
-      font-family: $font-family-sans-serif-bold;
+      font-family: $headings-font-family;
       font-size: 1.5rem;
       padding: 0 5%;
       display: inline;
