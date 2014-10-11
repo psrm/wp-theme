@@ -5,10 +5,29 @@
 
 .site-content {
   background-color: $body-bg;
+  padding: 20px;
 }
 
-#primary {
-  max-width:700px;
+.widget-area {
+  aside {
+    padding-top: 8%;
+    .widget-title {
+      background-color: lighten($brand-primary, 5%);
+      font-family: $font-family-sans-serif-bold;
+      font-size: 1.5rem;
+      padding: 0 5%;
+      display: inline;
+    }
+    .wrapper {
+      padding: 10px;
+    }
+    background-color: $brand-primary;
+    color: $navbar-default-color;
+    margin: 10px 0;
+    a {
+      color: #fff;
+    }
+  }
 }
 
 .site-footer {
@@ -23,6 +42,6 @@
     &.heading {
       text-decoration: underline;
     }
-    color: #fff;
+    color: $navbar-default-color;
   }
 }
