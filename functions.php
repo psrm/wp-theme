@@ -82,6 +82,22 @@ function psrm_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'psrm_scripts' );
 
+function psrm_theme_url_compare($url, $rel) {
+    $url = trailingslashit($url);
+    $rel = trailingslashit($rel);
+
+    if ((strcasecmp($url, $rel) === 0) ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function is_element_empty( $element ) {
+    $element = trim( $element );
+    return !empty( $element );
+}
+
 /**
  * Implement the Custom Header feature.
  */
@@ -101,3 +117,8 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Custom Nav Menu
+ */
+require get_template_directory() . '/inc/nav.php';
