@@ -10,3 +10,19 @@
 #primary {
   max-width:700px;
 }
+
+.site-footer {
+  padding: 20px 20px 30px 20px;
+  .footer-buffer {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: lighten($navbar-default-bg, 5%);
+  }
+  background-color: $navbar-default-bg;
+  span {
+    &.heading {
+      text-decoration: underline;
+    }
+    color: #fff;
+  }
+}
