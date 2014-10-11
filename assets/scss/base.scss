@@ -5,7 +5,7 @@
  * There should be no styles in this file, only @imports
  */
 // Core variables and mixins
-@import "bootstrap/variables";
+@import "variables";
 @import "bootstrap/mixins";
 
 // Reset and dependencies
@@ -54,3 +54,10 @@
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
+
+// PSRM Styles
+@import "global";
+@import "mixins";
+@import "accessability";
+@import "header";
+@import "nav";
