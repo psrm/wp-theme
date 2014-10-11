@@ -33,7 +33,7 @@
                 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
             <?php } ?>
 		</div>
-        <div class="container">
+        <div class="navbar navbar-default">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
