@@ -24,14 +24,28 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+            <?php if ( get_header_image() ) { ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <img src="<?php header_image(); ?>" class="img-responsive" alt="<?php echo esc_attr(get_post_meta(get_custom_header()->attachment_id, '_wp_attachment_image_alt', true)); ?>">
+                </a>
+            <?php } else{ ?>
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+            <?php } ?>
 		</div>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'psrm' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse" role="navigation">
+                <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav navbar-nav')); ?>
+            </nav>
+        </div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
