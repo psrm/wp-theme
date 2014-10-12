@@ -55,6 +55,15 @@ add_action( 'after_setup_theme', 'psrm_setup' );
  */
 function psrm_widgets_init() {
 	register_sidebar( array(
+		'name'          => __( 'Home Page Slider', 'psrm' ),
+		'id'            => 'home-slider',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-title sr-only">',
+		'after_title'   => '</div>',
+	) );
+    register_sidebar( array(
 		'name'          => __( 'Sidebar', 'psrm' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
@@ -65,6 +74,8 @@ function psrm_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'psrm_widgets_init' );
+add_filter( 'widget_text', 'shortcode_unautop' );
+add_filter( 'widget_text', 'do_shortcode' );
 
 /**
  * Enqueue scripts and styles.
