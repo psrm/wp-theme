@@ -3,3 +3,6 @@ node_modules
 
 # Minified css and js
 *.min.*
+
+# Ignore PhpStorm folder
+.idea
