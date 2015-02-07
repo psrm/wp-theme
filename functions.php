@@ -81,7 +81,9 @@ add_filter( 'widget_text', 'do_shortcode' );
  * Enqueue scripts and styles.
  */
 function psrm_scripts() {
-	wp_enqueue_style( 'psrm-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css' );
+
+	wp_enqueue_style( 'psrm-google-font', '//fonts.googleapis.com/css?family=Oswald:400');
+	wp_enqueue_style( 'psrm-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array('psrm-google-font') );
 
     wp_enqueue_script('psrm-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), false, true);
 
