@@ -59,12 +59,12 @@ gulp.task('jshint', function() {
 //
 //////////////////////////////////////////////////////////////////////
 gulp.task('js', ['jshint'], function() {
-    return gulp.src(paths.scripts)
+     gulp.src(paths.scripts)
         .pipe(concat('scripts.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('assets/js/'));
-    // util.log(util.colors.green('Javascript compiled and minified'));
+    util.log(util.colors.green('Javascript compiled and minified'));
 });
 
 
