@@ -13,6 +13,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3"
+    "bootstrap-sass": "3.3.2"
   }
 }
