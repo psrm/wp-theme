@@ -12,7 +12,7 @@ var util       = require('gulp-util');              // Writing stuff
 // Create our paths to do stuff
 var paths = {
     scripts: [
-        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/*.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
         'assets/js/_*.js'
     ],
     jshint: [
