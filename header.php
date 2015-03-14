@@ -19,6 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_shortcode('[psrm-service-alerts]'); ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'psrm' ); ?></a>
 
