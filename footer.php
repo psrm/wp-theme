@@ -14,12 +14,14 @@
 		<div class="site-info">
             <div class="footer-buffer clearfix">&nbsp;</div>
             <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
+                <div class="col-sm-4 col-sm-offset-2" itemscope itemprop="http://www.schema.org/TouristAttraction">
                     <span class="heading">Main Facility & Train Rides</span><br/>
                     <span><a href="visitor-information/find-us/">Campo Depot</a></span><br/>
-                    <span class="address-line-1">750 Depot Street</span><br/>
-                    <span class="address-line-2">Campo, California 91906</span><br/>
-                    <span class="telephone"><a href="tel:6194789937">(619) 478-9937</a></span>
+	                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span class="address-line-1" itemprop="streetAddress">750 Depot Street</span><br/>
+	                    <span class="address-line-2"><span itemprop="addressLocality">Campo</span>, <span itemprop="addressRegion">California</span> <span itemprop="postalCode">91906</span></span><br/>
+	                </div>
+                    <span class="telephone" itemprop="telephone"><a href="tel:6194789937">(619) 478-9937</a></span>
                 </div>
                 <div class="col-sm-5 col-sm-offset-1">
                     <span class="heading">Business Office</span><br/>
