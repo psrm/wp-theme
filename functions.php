@@ -5,14 +5,6 @@
  * @package psrm
  */
 
-if ( ! function_exists( 'psrm_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
 function psrm_setup() {
 
 	// Add default posts and comments RSS feed links to head.
@@ -44,8 +36,10 @@ function psrm_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+    // Enable title tag support
+    add_theme_support('title-tag');
 }
-endif; // psrm_setup
 add_action( 'after_setup_theme', 'psrm_setup' );
 
 /**
@@ -56,7 +50,7 @@ add_action( 'after_setup_theme', 'psrm_setup' );
 function psrm_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Home Page Slider', 'psrm' ),
-		'id'            => 'home-slider',
+		'id'            => 'home-slider-desktop',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -66,6 +60,33 @@ function psrm_widgets_init() {
     register_sidebar( array(
 		'name'          => __( 'Sidebar', 'psrm' ),
 		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Home Museum Info', 'psrm' ),
+		'id'            => 'home-museum-info',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Home Welcome', 'psrm' ),
+		'id'            => 'home-welcome',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Home CTA', 'psrm' ),
+		'id'            => 'home-cta',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -84,9 +105,9 @@ function psrm_scripts() {
 
 	wp_enqueue_style( 'psrm-google-font', '//fonts.googleapis.com/css?family=Oswald:400' );
 	wp_enqueue_style( 'psrm-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
-	wp_enqueue_style( 'psrm-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array('psrm-google-font', 'psrm-font-awesome'), '1424912866' );
+	wp_enqueue_style( 'psrm-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array('psrm-google-font', 'psrm-font-awesome'), '1430489675' );
 
-    wp_enqueue_script('psrm-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '1424912866', true);
+    wp_enqueue_script('psrm-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '1430489675', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
