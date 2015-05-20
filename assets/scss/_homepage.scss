@@ -1,0 +1,28 @@
+body.home {
+  .home-widget-cta {
+    padding: 30px;
+    .widget {
+      background-color: $table-bg-accent;
+      text-align: center;
+      @media(min-width: 807px) {
+        margin: 10px;
+        &.col-sm-4 {
+          width: 30.666666666666666666666668%;
+        }
+      }
+      &:hover {
+        background-color: $table-bg-hover;
+      }
+    }
+  }
+
+  .widget-title {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.6rem;
+  }
+
+  .content-area {
+    padding: 20px 0;
+  }
+}
