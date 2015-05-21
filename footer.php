@@ -14,7 +14,7 @@
 		<div class="site-info">
             <div class="footer-buffer clearfix">&nbsp;</div>
             <div class="row">
-                <div class="col-sm-4 col-sm-offset-2" itemscope itemprop="http://www.schema.org/TouristAttraction">
+                <div class="col-sm-5 col-sm-offset-1" itemscope itemprop="http://www.schema.org/TouristAttraction">
                     <span class="heading">Main Facility & Train Rides</span><br/>
                     <span><a href="visitor-information/find-us/">Campo Depot</a></span><br/>
 	                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -31,6 +31,9 @@
                     <span class="telephone"><a href="tel:6194657776">(619) 465-PSRM (465-7776) <i>recorded information</i></a></span>
                 </div>
             </div>
+            <br/><br/><p>
+                <span>&copy;2015 Pacific Southwest Railway Museum Association, Inc. </span>
+            </p>
         </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
