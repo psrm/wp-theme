@@ -4,7 +4,6 @@ jQuery(document).ready(function ($) {
             widgetElm = $('.home-widget-cta .widget');
         widgetElm.each(function (e) {
             height = Math.max(height, $(this).height());
-            console.log(height);
         });
         widgetElm.css('height', height);
     }
