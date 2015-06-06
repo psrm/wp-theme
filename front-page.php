@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="row">
 		<div id="above-content" class="museum-info content-area">
 			<main id="above-main" class="above-site-main row">
-				<?php dynamic_sidebar( 'home-museum-info' ); ?>
+				<?php dynamic_sidebar( 'home-welcome' ); ?>
 			</main>
 		</div>
 	</div>
@@ -25,7 +25,7 @@ get_header(); ?>
 		<main id="main" class="site-main row" role="main">
 
 			<div id="home-welcome" class="col-xs-12">
-				<?php dynamic_sidebar( 'home-welcome' ); ?>
+				<?php dynamic_sidebar( 'home-museum-info' ); ?>
 			</div>
 			<!-- #welcome -->
 
