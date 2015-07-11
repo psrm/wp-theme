@@ -11,7 +11,6 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -49,12 +48,12 @@
         </div>
 	</header><!-- #masthead -->
 
-    <?php if(is_home() && is_active_sidebar('home-slider')): ?>
+    <?php if (is_home() && is_active_sidebar('home-slider-desktop') && !wp_is_mobile()): ?>
 
         <div class="home-slider">
-        <?php dynamic_sidebar( 'home-slider' ); ?>
+            <?php dynamic_sidebar('home-slider-desktop'); ?>
         </div><!-- .home-slider -->
 
     <?php endif; ?>
 
-	<div id="content" class="site-content">
+    <div id="content" class="site-content">
