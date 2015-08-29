@@ -50,3 +50,20 @@ a {
     color: $navbar-default-color;
   }
 }
+
+div {
+  &.imgleft{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+  }
+
+  &.imgright{
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+  }
+
+}
