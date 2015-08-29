@@ -54,13 +54,11 @@ get_header(); ?>
 <div class="row">
 
 	<div id="latest-news" class="content-area col-sm-8">
-		<h1>Latest News From The Campo Depot</h1>
+		<h1>From the Museum Mailbag</h1>
 		<hr/>
 
 		<?php
-		query_posts( 'showposts=1' );
 		while ( have_posts() ) : the_post();
-			$news_id[] = get_the_ID();
 			?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -92,16 +90,15 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 		<?php endwhile; ?>
-		<?php wp_reset_query(); ?>
 
 	</div>
 	<div id="latest-news-sidebar" class="content-area col-sm-4">
-		<h2>Older News</h2>
+		<h2>More News</h2>
 		<hr/>
 		<?php
-		query_posts( array( 'post__not_in' => $news_id, 'showposts' => 3 ) );
+		$more_news = new WP_Query( array( 'offset' => get_option('posts_per_page'), 'showposts' => 3 ) );
 
-		while ( have_posts() ): the_post();
+		while ( $more_news->have_posts() ): $more_news->the_post();
 			?>
 
 			<?php the_title( sprintf( '<h4><a href="%s" rel=bookmark>', esc_url( get_permalink() ) ), '</a></h4>' );
@@ -109,7 +106,7 @@ get_header(); ?>
 
 		<?php
 		endwhile;
-		wp_reset_query();
+		wp_reset_postdata();
 		?>
 	</div>
 </div>
