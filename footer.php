@@ -21,7 +21,7 @@
                         <span class="address-line-1" itemprop="streetAddress">750 Depot Street</span><br/>
 	                    <span class="address-line-2"><span itemprop="addressLocality">Campo</span>, <span itemprop="addressRegion">California</span> <span itemprop="postalCode">91906</span></span><br/>
 	                </div>
-                    <span class="telephone" itemprop="telephone"><a href="tel:6194789937">(619) 478-9937</a></span>
+                    <span class="telephone" itemprop="telephone"><a href="tel:6194789937">(619) 478-9937 <i>weekends only</i></a></span>
                 </div>
                 <div class="col-sm-5 col-sm-offset-1">
                     <span class="heading">Business Office</span><br/>
