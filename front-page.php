@@ -53,7 +53,7 @@ get_header(); ?>
 </div>
 <div class="row">
 
-	<div id="latest-news" class="content-area col-sm-8">
+	<div id="latest-news" class="content-area col-sm-8" style="padding: 25px;">
 		<h1>From the Museum Mailbag</h1>
 		<hr/>
 
