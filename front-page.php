@@ -75,7 +75,6 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php
 					the_content('Read the rest of this entry &raquo;'); ?>
-					?>
 
 				</div>
 				<!-- .entry-content -->
