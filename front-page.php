@@ -66,7 +66,7 @@ get_header(); ?>
 					<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 					<div class="entry-meta">
-						<?php psrm_posted_on(); ?> by <?php the_author(); ?>
+						<?php psrm_posted_on(); ?>
 					</div>
 					<!-- .entry-meta -->
 				</header>
@@ -74,10 +74,7 @@ get_header(); ?>
 
 				<div class="entry-content">
 					<?php
-					the_excerpt( sprintf(
-						__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'psrm' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					) );
+					the_content('Read the rest of this entry &raquo;'); ?>
 					?>
 
 				</div>
