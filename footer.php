@@ -32,7 +32,7 @@
                 </div>
             </div>
             <br/><br/><p>
-                <span>&copy;2015 Pacific Southwest Railway Museum Association, Inc. </span>
+                <span>&copy;2016 Pacific Southwest Railway Museum Association, Inc. </span>
             </p>
         </div><!-- .site-info -->
 	</footer><!-- #colophon -->
