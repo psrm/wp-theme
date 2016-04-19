@@ -43,7 +43,7 @@
                 </button>
             </div>
             <nav class="collapse navbar-collapse" role="navigation">
-                <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav navbar-nav')); ?>
+                <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'sm sm-simple')); ?>
             </nav>
         </div>
 	</header><!-- #masthead -->
