@@ -7,19 +7,19 @@
   }
 }
 
-@media(min-width: $screen-sm-min) {
-  ul#menu-main-menu {
-    background: #2a1301;
+ul#menu-main-menu {
+  background: #2a1301;
+  border: none;
+  li {
     border: none;
-    li {
-      border: none;
-      a {
+    a {
+      color: $dropdown-link-hover-bg;
+      &:hover, &:active, &:focus, &.highlighted {
+        background: $brand-primary;
         color: $dropdown-link-hover-bg;
-        &:hover, &:active, &:focus, &.highlighted {
-          background: $brand-primary;
-          color: $dropdown-link-hover-bg;
-        }
       }
+    }
+    @media(min-width: $screen-sm-min) {
       ul > li > a {
         &.highlighted {
           color: $dropdown-link-hover-bg;
@@ -30,3 +30,4 @@
     }
   }
 }
+
