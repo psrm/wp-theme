@@ -1,0 +1,69 @@
+a {
+  font-family: $font-family-headings-base;
+}
+
+#page {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.site-content {
+  background-color: $body-bg;
+  padding: 20px;
+}
+
+.widget-area {
+  aside {
+    padding-top: 8%;
+    .widget-title {
+      background-color: lighten($brand-primary, 5%);
+      font-family: $headings-font-family;
+      font-size: 1.5rem;
+      padding: 0 5%;
+      display: inline;
+    }
+    .wrapper {
+      padding: 10px;
+    }
+    background-color: $brand-primary;
+    color: $navbar-default-color;
+    margin: 10px 0;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.site-footer {
+  padding: 20px 20px 30px 20px;
+  color: #fff;
+  .footer-buffer {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: lighten($navbar-default-bg, 5%);
+  }
+  background-color: $navbar-default-bg;
+  span {
+    &.heading {
+      text-decoration: underline;
+    }
+    color: $navbar-default-color;
+  }
+}
+
+div {
+  &.imgleft{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+  }
+
+  &.imgright{
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+  }
+
+}

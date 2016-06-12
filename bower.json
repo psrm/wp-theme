@@ -13,6 +13,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "bootstrap-sass": "3.3.2"
+    "bootstrap-sass": "3.3.*",
+    "smartmenus": "^1.0.0"
   }
 }

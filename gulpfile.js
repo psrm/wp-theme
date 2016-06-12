@@ -2,7 +2,7 @@ var gulp       = require('gulp');                   // Gulp!
 
 var sass       = require('gulp-sass');              // Sass
 var prefix     = require('gulp-autoprefixer');      // Autoprefixr
-var minifycss  = require('gulp-minify-css');        // Minify CSS
+var minifycss  = require('gulp-clean-css');        // Minify CSS
 var concat     = require('gulp-concat');            // Concat files
 var jshint     = require('gulp-jshint');            // JS Hinting
 var uglify     = require('gulp-uglify');            // Uglify javascript
@@ -13,6 +13,7 @@ var util       = require('gulp-util');              // Writing stuff
 var paths = {
     scripts: [
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+        'bower_components/smartmenus/dist/jquery.smartmenus.js',
         'assets/js/_*.js'
     ],
     jshint: [
