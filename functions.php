@@ -115,38 +115,75 @@ function psrm_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'psrm_scripts' );
 
-function psrm_theme_url_compare($url, $rel) {
-    $url = trailingslashit($url);
-    $rel = trailingslashit($rel);
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function psrm_posted_on()
+{
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+    $time_string = sprintf($time_string,
+        esc_attr(get_the_date('c')),
+        esc_html(get_the_date()),
+        esc_attr(get_the_modified_date('c')),
+        esc_html(get_the_modified_date())
+    );
+    $posted_on = sprintf(
+        _x('Posted on %s', 'post date', 'psrm'),
+        '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
+    );
+    echo '<span class="posted-on">' . $posted_on . '</span>';
+}
 
-    if ((strcasecmp($url, $rel) === 0) ) {
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function psrm_entry_footer()
+{
+    // Hide category and tag text for pages.
+    if ('post' == get_post_type()) {
+        /* translators: used between list items, there is a space after the comma */
+        $categories_list = get_the_category_list(__(', ', 'psrm'));
+        if ($categories_list && psrm_categorized_blog()) {
+            printf('<span class="cat-links">' . __('Posted in %1$s', 'psrm') . '</span>', $categories_list);
+        }
+        /* translators: used between list items, there is a space after the comma */
+        $tags_list = get_the_tag_list('', __(', ', 'psrm'));
+        if ($tags_list) {
+            printf('<span class="tags-links">' . __('Tagged %1$s', 'psrm') . '</span>', $tags_list);
+        }
+    }
+    if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {
+        echo '<span class="comments-link">';
+        comments_popup_link(__('Leave a comment', 'psrm'), __('1 Comment', 'psrm'), __('% Comments', 'psrm'));
+        echo '</span>';
+    }
+    edit_post_link(__('Edit', 'psrm'), '<span class="edit-link">', '</span>');
+}
+
+/**
+ * Returns true if a blog has more than 1 category.
+ *
+ * @return bool
+ */
+function psrm_categorized_blog()
+{
+    if (false === ($all_the_cool_cats = get_transient('psrm_categories'))) {
+        // Create an array of all the categories that are attached to posts.
+        $all_the_cool_cats = get_categories(array(
+            'fields'     => 'ids',
+            'hide_empty' => 1,
+            // We only need to know if there is more than one category.
+            'number'     => 2,
+        ));
+        // Count the number of categories that are attached to the posts.
+        $all_the_cool_cats = count($all_the_cool_cats);
+        set_transient('psrm_categories', $all_the_cool_cats);
+    }
+    if ($all_the_cool_cats > 1) {
+        // This blog has more than 1 category so psrm_categorized_blog should return true.
         return true;
     } else {
+        // This blog has only 1 category so psrm_categorized_blog should return false.
         return false;
     }
 }
-
-function is_element_empty( $element ) {
-    $element = trim( $element );
-    return !empty( $element );
-}
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
