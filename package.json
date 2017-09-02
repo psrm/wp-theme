@@ -1,26 +1,23 @@
 {
-    "title": "PSRM",
-    "description": "Theme for the psrm.org website",
-    "version": "1.0.0",
-    "homepage": "http://www.psrm.org",
-    "author": {
-        "name": "Spencer Piontkowski",
-        "email": "spiontkowski@psrm.org"
-    },
-    "devDependencies": {
-        "gulp": "^3.9.0",
-        "gulp-autoprefixer": "0.0.7",
-        "gulp-concat": "^2.2.0",
-        "gulp-imagemin": "^0.5.0",
-        "gulp-clean-css": "2.x",
-        "jshint": "*",
-        "gulp-jshint": "*",
-        "jshint-stylish": "*",
-        "gulp-rename": "^1.2.0",
-        "gulp-sass": "^2.2.0",
-        "gulp-size": "^0.3.0",
-        "gulp-svgmin": "^0.4.5",
-        "gulp-uglify": "^0.2.1",
-        "gulp-util": "^3.0.0"
-    }
+  "title": "PSRM",
+  "description": "Theme for the psrm.org website",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "http://www.psrm.org",
+  "author": {
+    "name": "Spencer Piontkowski",
+    "email": "spiontkowski@psrm.org"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "laravel-elixir": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap-sass": "3.3.*",
+    "smartmenus": "^1.0.0"
+  },
+  "engines": {
+    "npm": "5.4.0",
+    "node": "6.2.2"
+  }
 }

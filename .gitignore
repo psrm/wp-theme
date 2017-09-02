@@ -4,8 +4,5 @@ node_modules
 # Bower Development files
 bower_components
 
-# Minified css and js
-*.min.*
-
 # Ignore PhpStorm folder
 .idea

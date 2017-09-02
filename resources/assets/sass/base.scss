@@ -4,19 +4,14 @@
  *
  * There should be no styles in this file, only @imports
  */
-
 // Core variables and mixins
 @import "variables";
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
-
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 // PSRM Styles
 @import "main-style";
 @import "mixins";
 @import "accessability";
 @import "header";
-@import "../../bower_components/smartmenus/dist/css/sm-core-css.css";
-@import "../../bower_components/smartmenus/dist/css/sm-simple/sm-simple.css";
 @import "nav";
 @import "gallery";
 @import "forms";
