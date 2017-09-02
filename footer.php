@@ -37,7 +37,7 @@
         </div>
         <br/><br/>
         <p>
-            <span>&copy;2016 Pacific Southwest Railway Museum Association, Inc. </span>
+            <span><a href="https://www.guidestar.org/profile/95-2374478" target="_blank"><img src="https://widgets.guidestar.org/gximage2?o=8441150&l=v4" id="guidestar-logo" /></a> &copy;<?php echo date('Y'); ?> Pacific Southwest Railway Museum Association, Inc.</span>
         </p>
     </div><!-- .site-info -->
 </footer><!-- #colophon -->
