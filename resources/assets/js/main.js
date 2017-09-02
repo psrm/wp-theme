@@ -13,6 +13,6 @@ jQuery(document).ready(function ($) {
     });
 
     ctaBoxHeight();
-    
+
     $('#menu-main-menu').smartmenus();
 });

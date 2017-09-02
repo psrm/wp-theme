@@ -4,12 +4,9 @@
  *
  * There should be no styles in this file, only @imports
  */
-
 // Core variables and mixins
 @import "variables";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-
 // PSRM Styles
 @import "main-style";
 @import "mixins";

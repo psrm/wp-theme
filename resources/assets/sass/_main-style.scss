@@ -52,18 +52,18 @@ a {
 }
 
 div {
-  &.imgleft{
+  &.imgleft {
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
-    text-align:center;
+    text-align: center;
   }
 
-  &.imgright{
+  &.imgright {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
-    text-align:center;
+    text-align: center;
   }
 
 }
