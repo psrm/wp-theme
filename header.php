@@ -50,4 +50,12 @@
         </div>
     </header><!-- #masthead -->
 
+    <?php if (is_home() && is_active_sidebar('home-slider-desktop')): ?>
+
+        <div class="home-slider">
+            <?php dynamic_sidebar('home-slider-desktop'); ?>
+        </div><!-- .home-slider -->
+
+    <?php endif; ?>
+
     <div id="content" class="site-content">

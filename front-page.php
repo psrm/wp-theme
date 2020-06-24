@@ -7,14 +7,6 @@
 
 get_header(); ?>
 
-<?php if (is_active_sidebar('home-slider-desktop')): ?>
-
-    <div class="home-slider">
-        <?php dynamic_sidebar('home-slider-desktop'); ?>
-    </div><!-- .home-slider -->
-
-<?php endif; ?>
-
 <?php if (is_active_sidebar('home-museum-info')): ?>
 
     <div class="row">
